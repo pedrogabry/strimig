@@ -8,19 +8,24 @@
     <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
 </head>
 <body>
+    <header>
+        <ul>
+            <li>Sessão ao vivo</li>
+            <li>Filmes</li>
+            <li>Series</li>
+    
+        </ul>
+    </header>
     <div class="container">
-        <h1>Selecione um Canal</h1>
         <div id="channels">
             {% for id, url in channels.items() %}
-                <button class="channel-btn" onclick="playChannel('{{ id }}')">Canal {{ id }}</button>
+                <button class="channel-btn" onclick="playChannel('{{ id }}')">{{ id }}</button>
             {% endfor %}
         </div>
         <div id="video-container" style="display: none;">
             <video id="video-player" width="600" controls></video>
         </div>
-        <div id="timer">
-            Tempo de exibição: <span id="time">0</span> segundos
-        </div>
+        
     </div>
     <script>
         function playChannel(channel_id) {

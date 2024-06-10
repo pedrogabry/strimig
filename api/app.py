@@ -11,8 +11,19 @@ player = None
 
 # Mapeamento de URLs dos canais (exemplo com a URL fornecida)
 channel_urls = {
-    "4675": "https://cdn-3.nxplay.com.br/ESPN_4/tracks-v1a1/mono.m3u8",
-    "6806": "https://cdn-3.nxplay.com.br/DISCOVERY_CHANNEL_NX/tracks-v1a1/mono.m3u8",
+    "premier":"http://evpp.mm.uol.com.br/ne10/ne10.smil/playlist.m3u8?EDSONSOUSALIST",
+    "paramont":"https://watch.vcdn.in/paramount/index.m3u8",
+    "TNT Series":"https://watch.vcdn.in/tntseries/index.m3u8",
+    "Warner Channel":"https://watch.vcdn.in/warnerchannel/index.m3u8",
+    "Telecine Pipoca":"https://watch.vcdn.in/telecinepipoca/index.m3u8",
+    "Telecine Fun":"https://watch.vcdn.in/telecinefun/index.m3u8",
+    "TNT":"https://watch.vcdn.in/tnt/index.m3u8",
+    "Telecine action": "https://watch.vcdn.in/telecineaction/index.m3u8",
+    "2":"https://video01.logicahost.com.br/redefamiliaa/redefamiliaa/chunklist_w1049597052.m3u8",
+    "Telecine Premium":"https://watch.vcdn.in/telecinepremium/index.m3u8",
+    "GLOBO": "https://brflu.walk-tv.com/5756/tracks-v1a1/mono.m3u8",
+    "ESPN": "https://cdn-3.nxplay.com.br/ESPN_4/tracks-v1a1/mono.m3u8",
+    "DISCOVERY": "https://cdn-3.nxplay.com.br/DISCOVERY_CHANNEL_NX/tracks-v1a1/mono.m3u8",
     # Adicione mais URLs conforme necessário
 }
 
@@ -21,7 +32,7 @@ def play_channel(url):
     global start_time, player
     try:
         print("Inicializando VLC...")
-        instance = vlc.Instance("--network-caching=1000", "--file-caching=1000", "--live-caching=500")
+        instance = vlc.Instance("--network-caching=1000", "--file-caching=1000", "--live-caching=1000")
         player = instance.media_player_new()
         media = instance.media_new(url)
         player.set_media(media)
