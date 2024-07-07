@@ -36,7 +36,13 @@ video#video-player {
     display: flex;
     margin-bottom: 20px;
     flex-direction: column;
+    width: 300px;
+    height: 200px;
+    overflow: auto;
+    border: 1px solid #ccc;
+    padding: 10px;
 }
+
 
 .channel-btn {
     padding: 10px 20px;
