@@ -1,58 +1,58 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #161414d8;
-    color: #333;
-    text-align: center;
-    margin: 0px;
-    padding: 0px;
+body{
+    background-color: rgb(255, 255, 255);
+    margin: 0;
+    padding: 0;
+
 }
 header{
-    border-bottom-width: 2px;
-    border-bottom-style: outset;
-    border-color: #e9ebebb6;
-    background-color: transparent;
-    
+    width: 100%;
+    position: absolute;
+    color: aliceblue;
 }
 header ul{
+    display: inline-flex;
+    border-color: rgba(0, 0, 0, 0.658);
+    border-bottom: 1px;
     list-style: none;
-    display: flex;
-    justify-content: space-around}
-header ul li{
-    color: aliceblue;
-    font-size: 25px;
+    width: 90%;
+    justify-content: space-evenly;
+    flex-direction: row;
 }
-.container {
-    margin-top: 5%;
-    display: flex;
-    justify-content: space-around;
-    
+#container{
+    height: 100vh;
+    background-image: url("img/e0bde3e1273bde1141988d2f2f2daeee.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
-
-video#video-player {
-    border-radius: 20px;
+#container .filme{
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(90deg, rgb(0, 0, 0), transparent),
+    linear-gradient(45deg, rgb(0, 0, 0), transparent);
 }
-
-#channels {
-    display: flex;
-    margin-bottom: 20px;
-    flex-direction: column;
-    width: 300px;
+#container .filme .assistir{
+    margin-top: 95%;
+    border-style: none;
+    border-radius: 10px;
+    margin-left: 20%;
+    height: 30px;
+    width: 80px;
+    background-color: rgba(5, 47, 161, 0.788);
+}
+#container .filme .saber-mais{
+    border-style: none;
+    border-radius: 10px;
+    margin-left: 15px;
+    height: 30px;
+    width: 80px;
+    background-color: rgba(161, 5, 5, 0.788);
+}
+/*///////////////////////////////seção scrool //////////////////////*/ 
+#container .scrool{
     height: 200px;
-    overflow: auto;
-    border: 1px solid #ccc;
-    padding: 10px;
+    width: 150px;
+    border-radius: 15px;
+    margin-top: 23%;
+    margin-left: 5%;
+    background-color: rgba(47, 79, 79, 0.74);
 }
-
-
-.channel-btn {
-    padding: 10px 20px;
-    margin: 5px;
-    font-size: 16px;
-    cursor: pointer;
-    background-color: #e9ebebb6;
-    color: #161414d8;
-    border: none;
-    border-radius: 4px;
-}
-
-
