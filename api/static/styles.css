@@ -1,5 +1,5 @@
 body{
-    background-color: rgb(255, 255, 255);
+    background-color: #373985;
     margin: 0;
     padding: 0;
 
@@ -28,7 +28,7 @@ header ul{
     height: 100%;
     width: 100%;
     background: linear-gradient(90deg, rgb(0, 0, 0), transparent),
-    linear-gradient(45deg, rgb(0, 0, 0), transparent);
+    linear-gradient(0deg, rgb(0, 0, 0), transparent);
 }
 #container .filme .assistir{
     margin-top: 95%;
@@ -37,7 +37,7 @@ header ul{
     margin-left: 20%;
     height: 30px;
     width: 80px;
-    background-color: rgba(5, 47, 161, 0.788);
+    background-color: rgb(4 119 173 / 79%);
 }
 #container .filme .saber-mais{
     border-style: none;
@@ -45,7 +45,7 @@ header ul{
     margin-left: 15px;
     height: 30px;
     width: 80px;
-    background-color: rgba(161, 5, 5, 0.788);
+    background-color: rgba(153, 153, 153, 0.788);
 }
 /*///////////////////////////////seção scrool //////////////////////*/ 
 #container .scrool{
