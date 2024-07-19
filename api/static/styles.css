@@ -1,10 +1,12 @@
 body{
-    background-color: #373985;
+    background-color: rgb(0, 0, 0);
     margin: 0;
     padding: 0;
 
 }
 header{
+    background-color: rgba(0, 0, 0, 0.404);
+    height: 60px;
     width: 100%;
     position: absolute;
     color: aliceblue;
@@ -14,15 +16,26 @@ header ul{
     border-color: rgba(0, 0, 0, 0.658);
     border-bottom: 1px;
     list-style: none;
-    width: 90%;
+    width: 92%;
+    font-size: 22px;
     justify-content: space-evenly;
     flex-direction: row;
 }
 #container{
     height: 100vh;
+}
+.capa-inicio{
+    height: 65%;
     background-image: url("img/e0bde3e1273bde1141988d2f2f2daeee.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+}
+.image-carrocel{
+    display: flex;
+    align-items: flex-end;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(90deg, rgb(0, 0, 0), transparent 45%), linear-gradient(0deg, rgb(0, 0, 0), transparent 15%);
 }
 #container .filme{
     height: 100%;
@@ -31,7 +44,7 @@ header ul{
     linear-gradient(0deg, rgb(0, 0, 0), transparent);
 }
 #container .filme .assistir{
-    margin-top: 95%;
+    margin-bottom: 90px;
     border-style: none;
     border-radius: 10px;
     margin-left: 20%;
@@ -40,6 +53,7 @@ header ul{
     background-color: rgb(4 119 173 / 79%);
 }
 #container .filme .saber-mais{
+    margin-bottom: 90px;
     border-style: none;
     border-radius: 10px;
     margin-left: 15px;
@@ -48,6 +62,12 @@ header ul{
     background-color: rgba(153, 153, 153, 0.788);
 }
 /*///////////////////////////////seção scrool //////////////////////*/ 
+.lista {
+    overflow: scroll;
+    display: -webkit-box;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
 #container .scrool{
     height: 200px;
     width: 150px;

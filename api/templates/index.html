@@ -17,15 +17,34 @@
     </header>
     <div id="container">
         <div class="filme">
-            <button class="assistir">Assistir</button>
-            <button class="saber-mais">Saber mais</button>
-            <div class="scrool">
+            <div class="capa-inicio">
+                <div class="image-carrocel">
+                    <button class="assistir">Assistir</button>
+                    <button class="saber-mais">Saber mais</button>
+                </div>
+            </div>
+            <div class="lista">
                 {% for id, url in channels.items() %}
-                <button class="channel-btn">{{ id }}</button>
-            {% endfor %}
+                <div class="scrool">
+                    <button class="channel-btn">{{ id }}</button>
+                </div>
+                {% endfor %}
             </div>
         </div>
 
     </div>
+    <script>
+         const container = document.querySelector('.lista ');
+
+         container.addEventListener('scroll', () => {
+            // Checa se o usuário rolou até o final
+            if (container.scrollLeft + container.clientWidth >= container.scrollWidth) {
+                // Mover o primeiro item para o final da lista
+                container.appendChild(container.firstElementChild);
+                // Ajusta a posição do scroll
+                container.scrollLeft -= container.firstElementChild.offsetWidth;
+            }
+        });
+    </script>
 </body>
 </html>
