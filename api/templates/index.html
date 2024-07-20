@@ -23,28 +23,40 @@
                     <button class="saber-mais">Saber mais</button>
                 </div>
             </div>
+            {% for category, channels in channels.items() %}
             <div class="lista">
+                <p>{{category}}</p>
                 {% for id, url in channels.items() %}
                 <div class="scrool">
-                    <button class="channel-btn">{{ id }}</button>
+                    <a href="play.html">
+                        <button class="channel-btn">{{ id }}</button>
+                    </a>
                 </div>
                 {% endfor %}
             </div>
+            {% endfor %}
         </div>
 
     </div>
     <script>
-         const container = document.querySelector('.lista ');
+         const container = document.querySelector('.lista');
 
-         container.addEventListener('scroll', () => {
+        container.addEventListener('scroll', () => {
             // Checa se o usuário rolou até o final
             if (container.scrollLeft + container.clientWidth >= container.scrollWidth) {
-                // Mover o primeiro item para o final da lista
-                container.appendChild(container.firstElementChild);
-                // Ajusta a posição do scroll
-                container.scrollLeft -= container.firstElementChild.offsetWidth;
+                // Guarda os dois primeiros elementos
+                const firstChild = container.firstElementChild;
+                const secondChild = firstChild.nextElementSibling;
+                
+                // Ajusta a posição do scroll antes de mover os elementos
+                container.scrollLeft -= (firstChild.offsetWidth + secondChild.offsetWidth);
+
+                // Move os dois primeiros elementos para o final da lista
+                container.appendChild(firstChild);
+                container.appendChild(secondChild);
             }
         });
+
     </script>
 </body>
 </html>

@@ -14,16 +14,32 @@ elemento= False
 
 # Mapeamento de URLs dos canais (exemplo com a URL fornecida)
 channel_urls = {
-    "40": "http://selpro1348.procergs.com.br:1935/tve/stve/playlist.m3u",
-    "41": "http://selpro1348.procergs.com.br:1935/tve/stve/playlist.m3u",
-    "42": "http://selpro1348.procergs.com.br:1935/tve/stve/playlist.m3u",
-    "43": "http://selpro1348.procergs.com.br:1935/tve/stve/playlist.m3u",
-    "44": "http://selpro1348.procergs.com.br:1935/tve/stve/playlist.m3u",
-    "45": "http://selpro1348.procergs.com.br:1935/tve/stve/playlist.m3u",
-    "46": "http://selpro1348.procergs.com.br:1935/tve/stve/playlist.m3u",
-    "47": "http://selpro1348.procergs.com.br:1935/tve/stve/playlist.m3u",
-    "48": "http://selpro1348.procergs.com.br:1935/tve/stve/playlist.m3u",
-    "49": "http://selpro1348.procergs.com.br:1935/tve/stve/playlist.m3u",
+    "Filmes": {
+        "40": "https://drive.google.com/drive/folders/0BxYfydc53aj7LVdGemlTN2MxZmc",
+        "41": "http://selpro1348.procergs.com.br:1935/tve/stve/playlist.m3u",
+        "42": "http://selpro1348.procergs.com.br:1935/tve/stve/playlist.m3u",
+        "43": "http://selpro1348.procergs.com.br:1935/tve/stve/playlist.m3u",
+        "44": "http://selpro1348.procergs.com.br:1935/tve/stve/playlist.m3u",
+        "45": "http://selpro1348.procergs.com.br:1935/tve/stve/playlist.m3u",
+    },
+    "Series": {
+        "46": "http://selpro1348.procergs.com.br:1935/tve/stve/playlist.m3u",
+        "47": "http://selpro1348.procergs.com.br:1935/tve/stve/playlist.m3u",
+        "48": "http://selpro1348.procergs.com.br:1935/tve/stve/playlist.m3u",
+        "49": "http://selpro1348.procergs.com.br:1935/tve/stve/playlist.m3u",
+    },
+    "Anime": {
+        "50": "http://selpro1348.procergs.com.br:1935/tve/stve/playlist.m3u",
+        "51": "http://selpro1348.procergs.com.br:1935/tve/stve/playlist.m3u",
+        "52": "http://selpro1348.procergs.com.br:1935/tve/stve/playlist.m3u",
+        "53": "http://selpro1348.procergs.com.br:1935/tve/stve/playlist.m3u",
+    },
+    "Romance": {
+        "54": "http://selpro1348.procergs.com.br:1935/tve/stve/playlist.m3u",
+        "55": "http://selpro1348.procergs.com.br:1935/tve/stve/playlist.m3u",
+        "56": "http://selpro1348.procergs.com.br:1935/tve/stve/playlist.m3u",
+        "57": "http://selpro1348.procergs.com.br:1935/tve/stve/playlist.m3u",
+    }
     
 }
 

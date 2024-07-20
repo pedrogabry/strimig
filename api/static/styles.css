@@ -48,8 +48,8 @@ header ul{
     border-style: none;
     border-radius: 10px;
     margin-left: 20%;
-    height: 30px;
-    width: 80px;
+    height: 35px;
+    width: 100px;
     background-color: rgb(4 119 173 / 79%);
 }
 #container .filme .saber-mais{
@@ -57,11 +57,17 @@ header ul{
     border-style: none;
     border-radius: 10px;
     margin-left: 15px;
-    height: 30px;
-    width: 80px;
+    height: 35px;
+    width: 100px;
     background-color: rgba(153, 153, 153, 0.788);
 }
 /*///////////////////////////////seção scrool //////////////////////*/ 
+p{
+    margin-top: 50px;
+    margin-left: 20px;
+    position: absolute;
+    color: aliceblue;
+}
 .lista {
     overflow: scroll;
     display: -webkit-box;
