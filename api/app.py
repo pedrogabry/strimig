@@ -39,7 +39,14 @@ channel_urls = {
         "55": "http://selpro1348.procergs.com.br:1935/tve/stve/playlist.m3u",
         "56": "http://selpro1348.procergs.com.br:1935/tve/stve/playlist.m3u",
         "57": "http://selpro1348.procergs.com.br:1935/tve/stve/playlist.m3u",
+    },
+    "Ação": {
+        "58": "http://selpro1348.procergs.com.br:1935/tve/stve/playlist.m3u",
+        "59": "http://selpro1348.procergs.com.br:1935/tve/stve/playlist.m3u",
+        "60": "http://selpro1348.procergs.com.br:1935/tve/stve/playlist.m3u",
+        "61": "http://selpro1348.procergs.com.br:1935/tve/stve/playlist.m3u",
     }
+    
     
 }
 
