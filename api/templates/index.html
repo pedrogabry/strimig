@@ -1,30 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../static/styles.css">
-    <title>Document</title>
+    <title>Onevision</title>
 </head>
 <body>
     <header>
         <ul>
-            <li>Inicio</li>
-            <li>Filmes</li>
-            <li>Series</li>
-            <li>Anime</li>
+            <li>
+                <a href="/">inicio</a>
+            </li>
+            <li>
+                <a href="/filmes">Filmes</a>
+            </li>
+            <li> 
+                <a href="/series">Series</a> 
+            </li>
+            <li> 
+                <a href="/animes">Animes</a> 
+            </li>
         </ul>
     </header>
+    
     <div id="container">
         <div class="filme">
-            <div class="capa-inicio">
-                <div class="image-carrocel">
-                    <button class="assistir">Assistir</button>
-                    <button class="saber-mais">Saber mais</button>
+            <div class="your-class" id="capa-inicio">
+                <div class="carousel-item" style="background-image: url('../static/img/transformes.png');">
+                    <div class="image-carrocel">
+                        <button class="assistir">Assistir</button>
+                        <button class="saber-mais">Saber mais</button>
+                    </div>
                 </div>
-            </div>
+                <div class="carousel-item" id="image-carrocel" style="background-image: url('../static/img/e0bde3e1273bde1141988d2f2f2daeee.jpg');">
+                        <div class="image-carrocel">
+                            <button class="assistir">Assistir</button>
+                            <button class="saber-mais">Saber mais</button>
+                        </div>
+                </div>
+                <div class="carousel-item" id="image-carrocel" style="background-image: url('../static/img/vingadores-ultimato.jpg');">
+                    <div class="image-carrocel">
+                        <button class="assistir">Assistir</button>
+                        <button class="saber-mais">Saber mais</button>
+                    </div>
+                </div>
+              </div>
             {% for category, channels in channels.items() %}
-            <div class="lista">
+            <div class="lista" id="{{category}}">
                 <p>{{category}}</p>
                 {% for id, url in channels.items() %}
                 <div class="scrool">
@@ -36,27 +63,47 @@
             </div>
             {% endfor %}
         </div>
-
+        
     </div>
-    <script>
-         const container = document.querySelector('.lista');
-
-        container.addEventListener('scroll', () => {
-            // Checa se o usuário rolou até o final
-            if (container.scrollLeft + container.clientWidth >= container.scrollWidth) {
-                // Guarda os dois primeiros elementos
-                const firstChild = container.firstElementChild;
-                const secondChild = firstChild.nextElementSibling;
-                
-                // Ajusta a posição do scroll antes de mover os elementos
-                container.scrollLeft -= (firstChild.offsetWidth + secondChild.offsetWidth);
-
-                // Move os dois primeiros elementos para o final da lista
-                container.appendChild(firstChild);
-                container.appendChild(secondChild);
-            }
+    <script type="text/javascript">
+        $(document).ready(function(){
+          $('.your-class').slick({
+            dots: true,
+            infinite: true,
+            speed: 1000, // Velocidade da transição (1 segundo)
+            fade: true, // Ativar a transição de fade
+            cssEase: 'linear', 
+            speed: 500,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            autoplay: true,
+            autoplaySpeed: 10000,
+          });
         });
-
+      </script>      
+    <script>
+        // Seleciona todos os elementos com a classe 'lista'
+        const containers = document.querySelectorAll('.lista');
+    
+        // Adiciona o evento de scroll a cada container
+        containers.forEach(container => {
+            container.addEventListener('scroll', () => {
+                // Checa se o usuário rolou até o final
+                if (container.scrollLeft + container.clientWidth >= container.scrollWidth) {
+                    // Guarda os dois primeiros elementos
+                    const firstChild = container.firstElementChild;
+                    
+                    
+                    // Ajusta a posição do scroll antes de mover os elementos
+                    container.scrollLeft -= (firstChild.offsetWidth);
+                    
+                    // Move os dois primeiros elementos para o final da lista
+                    container.appendChild(firstChild);
+                    container.appendChild(secondChild);
+                }
+            });
+        });
     </script>
+    
 </body>
 </html>

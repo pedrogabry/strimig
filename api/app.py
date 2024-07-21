@@ -120,7 +120,31 @@ def get_time():
         return jsonify(time=elapsed_time)
     return jsonify(time=0)
 
+@app.route('/filmes')
+def filmes():
+    # Suponha que você tenha uma lista de URLs de filmes
+    filmes_urls = [
+        'https://example.com/filme1',
+        'https://example.com/filme2',
+        'https://example.com/filme3',
+    ]
+    return render_template('filmes.html', filmes=filmes_urls)
 
-
+@app.route('/series')
+def series():
+    series_ulr=[
+        'https://example.com/filme1',
+        'https://example.com/filme2',
+        'https://example.com/filme3',
+    ]
+    return render_template('series.html', series= series_ulr)
+@app.route('/animes')
+def animes():
+    animes_url=[
+        'https://example.com/filme1',
+        'https://example.com/filme2',
+        'https://example.com/filme3',
+    ]
+    return render_template('animes.html', animes=animes_url)
 if __name__ == '__main__':
     app.run(debug=True)

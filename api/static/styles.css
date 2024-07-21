@@ -1,14 +1,18 @@
 body{
+    display: flex;
     background-color: rgb(0, 0, 0);
     margin: 0;
     padding: 0;
+    flex-direction: column;
+    justify-content: flex-start;
 
 }
 header{
-    background-color: rgba(0, 0, 0, 0.404);
+    position: fixed;
+    background-color: rgba(0, 0, 0, 7%);
     height: 60px;
     width: 100%;
-    position: absolute;
+    z-index: 1;
     color: aliceblue;
 }
 header ul{
@@ -20,22 +24,12 @@ header ul{
     font-size: 22px;
     justify-content: space-evenly;
     flex-direction: row;
+    padding: 0%;
 }
-#container{
-    height: 100vh;
-}
-.capa-inicio{
-    height: 65%;
-    background-image: url("img/e0bde3e1273bde1141988d2f2f2daeee.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-.image-carrocel{
-    display: flex;
-    align-items: flex-end;
-    height: 100%;
-    width: 100%;
-    background: linear-gradient(90deg, rgb(0, 0, 0), transparent 45%), linear-gradient(0deg, rgb(0, 0, 0), transparent 15%);
+
+a{
+    color: aliceblue;
+    text-decoration: none;
 }
 #container .filme{
     height: 100%;
@@ -61,6 +55,21 @@ header ul{
     width: 100px;
     background-color: rgba(153, 153, 153, 0.788);
 }
+.your-class .carousel-item {
+    display: flex;
+    height: 60vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    align-items: flex-end;
+  }
+  .image-carrocel {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    background: linear-gradient(90deg, black, transparent 40%), linear-gradient(0deg, black, transparent 30%);
+    align-items: flex-end;
+  }
 /*///////////////////////////////seção scrool //////////////////////*/ 
 p{
     margin-top: 50px;
@@ -74,6 +83,9 @@ p{
     flex-direction: row;
     flex-wrap: nowrap;
 }
+.lista::-webkit-scrollbar {
+    display: none;
+}
 #container .scrool{
     height: 200px;
     width: 150px;
@@ -82,3 +94,11 @@ p{
     margin-left: 5%;
     background-color: rgba(47, 79, 79, 0.74);
 }
+
+
+/*///////////////////////////filmes, series, animes etc //////////////////////////*/
+#container{
+    display: flex;
+    flex-wrap: wrap;
+}
+
